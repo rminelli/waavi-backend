@@ -2,10 +2,10 @@
 exports.up = async function (knex, Promise) {
     return await knex.schema.createTable('peliculas', table => {
         table.increments('id').primary()
-        table.string('titulo,', 1000).notNull()
+        table.string('titulo', 1000).notNull()
         table.string('descripcion', 1000).notNull()
-        table.string('generos', 1000).notNull()
-        table.binary('cartel').notNull()        
+        table.string('genero', 1000).notNull()
+        table.string('cartel',10000000)
     })
 };
 

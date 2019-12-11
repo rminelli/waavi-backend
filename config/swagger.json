@@ -1,0 +1,397 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "Documentación de uso de API para el sistema de autenticación y CRUD de películas. <br> <br> <strong> Ingrese el token para acceder a métodos privados</strong> <br> <strong>Ej.:</strong> <br> <i>bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MiwibmFtZSI6IlJpY2FyZG8iLCJpYXQiOjE1NzYwODk2MTMsImV4cCI6MTU3NjE3NjAxM30.1_G5Q8Cz3W8TtxAnLYhrOwJg0A9HLMlEj9HFRe4xjGY</i> <br> <br> <br> Roberto de Figuiredo Minelli <br> LinkedIn - https://www.linkedin.com/in/robertominelli/ <br>Github - https://github.com/rminelli/waavi-backend",
+    "version": "1.0.0",
+    "title": "Waavi Backend API",
+    "contact": {
+      "email": "rminelli@gmail.com"
+    },
+    "license": {
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
+    }
+  },
+  "basePath": "/",
+  "tags": [
+    {
+      "name": "usuario",
+      "description": "Operaciones sobre usuario",
+      "externalDocs": {
+        "description": "Find out more about our store",
+        "url": "http://swagger.io"
+      }
+    },
+    {
+      "name": "peliculas",
+      "description": "Acceso a películas"
+    }
+  ],
+  "schemes": ["http"],
+  "paths": {
+    "/signup": {
+      "post": {
+        "tags": ["usuario"],
+        "summary": "Crear cuenta",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "usuario",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/Signup"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Successful Operation"
+          }
+        }
+      }
+    },
+    "/signin": {
+      "post": {
+        "tags": ["usuario"],
+        "summary": "Iniciar sesión",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "usuario",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/Signin"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Successful Operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/users": {
+      "get": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "tags": ["usuario"],
+        "summary": "Devuelve todos los usuarios",
+        "produces": ["application/json"],
+        "responses": {
+          "201": {
+            "description": "Successful Operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/user/{userId}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "tags": ["usuario"],
+        "summary": "Actualizar un usuario",        
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "Usuario que necesita ser actualizado",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "usuario",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/Signup"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Successful Operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "tags": ["usuario"],
+        "summary": "Eliminar un usuario",        
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "userId",
+            "in": "path",
+            "description": "Película que necesita ser eliminada",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "Successful Operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/peliculas": {
+      "get": {
+        "tags": ["peliculas"],
+        "summary": "Devuelve las películas paginadas",
+        "description": "Use el Query Parameter para especificar la página",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "query",
+            "name": "page",
+            "description": "Ingrese la página que desea o deje en blanco para ver los primeros 10 registros",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          }
+        }
+      }
+    },
+    "/peliculas/titulo": {
+      "get": {
+        "tags": ["peliculas"],
+        "summary": "Devuelve las películas filtrado por nombre",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "titulo",
+            "description": "Titulo de película",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          }
+        }
+      }
+    },
+    "/peliculas/generos": {
+      "get": {
+        "tags": ["peliculas"],
+        "summary": "Devuelve las películas filtrado por géneros",
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "in": "header",
+            "name": "generos",
+            "description": "Ej.: terror,comedia,drama",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          }
+        }
+      }
+    },
+    "/pelicula": {
+      "post": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "tags": ["peliculas"],
+        "summary": "Insertar una película - se requiere autenticación",
+        "description": "Convertir imágenes a base64 - https://www.base64-image.de/",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "titulo",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/Pelicula"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Successful Operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    },
+    "/pelicula/{peliculaId}": {
+      "put": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "tags": ["peliculas"],
+        "summary": "Actualizar una pelicula",
+        "description": "Convertir imágenes a base64 - https://www.base64-image.de/",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "peliculaId",
+            "in": "path",
+            "description": "Película que necesita ser actualizada",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "titulo",
+            "in": "body",
+            "required": true,
+            "type": "object",
+            "schema": {
+              "$ref": "#/definitions/Pelicula"
+            }
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Successful Operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      },
+      "delete": {
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "tags": ["peliculas"],
+        "summary": "Eliminar una pelicula",
+        "description": "Convertir imágenes a base64 - https://www.base64-image.de/",
+        "consumes": ["application/json"],
+        "produces": ["application/json"],
+        "parameters": [
+          {
+            "name": "peliculaId",
+            "in": "path",
+            "description": "Película que necesita ser eliminada",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful Operation"
+          },
+          "401": {
+            "description": "Unauthorized"
+          }
+        }
+      }
+    }
+  },
+  "securityDefinitions": {
+    "bearerAuth": {
+      "type": "apiKey",
+      "in": "header",
+      "name": "Authorization",
+      "authorizationUrl": "/signin",
+      "scheme": "bearer",
+      "bearerFormat": "JWT",
+      "description": "Ingrese el token para acceder a métodos privados. "
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "JWT"
+      }
+    }
+  },
+  "definitions": {
+    "Signup": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        },
+        "confirmPassword": {
+          "type": "string"
+        }
+      }
+    },
+    "Signin": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string"
+        },
+        "password": {
+          "type": "string"
+        }
+      }
+    },
+    "Pelicula": {
+      "type": "object",
+      "description": "Convertir imágenes a base64",
+      "properties": {
+        "titulo": {
+          "type": "string"
+        },
+        "descripcion": {
+          "type": "string"
+        },
+        "genero": {
+          "type": "string"
+        },
+        "cartel": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}

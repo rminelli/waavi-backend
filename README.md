@@ -25,7 +25,7 @@
 
 ## Requisitos
 
-:whale: Instalación de Docker y Docker-Compose
+:whale: Instalación de Docker y Docker-Compose para el contenedor de base de datos de PostgreSQL
 
 ```bash
 # Instalación

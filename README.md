@@ -51,6 +51,9 @@ $ git clone https://github.com/rminelli/waavi-backend
 ## Configuración del proyecto
 $ npm install
 
+## Crea y inicia el contenedor
+$ docker-compose up -d
+
 # Crear base de datos con knex
 $ knex migrate:latest
 

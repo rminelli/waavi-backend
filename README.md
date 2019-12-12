@@ -41,10 +41,6 @@ $ npm install -g docker-compose
 #
 
 ```bash
-
-```
-
-```bash
 # Clonar este repositorio
 $ git clone https://github.com/rminelli/waavi-backend
 

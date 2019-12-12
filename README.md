@@ -25,10 +25,12 @@
 
 ## Requisitos
 
+:rocket: Descargue el instalador preconstruido [Node.js](https://nodejs.org/en/download/) para su plataforma
+
 :whale: Instalación de Docker y Docker-Compose para el contenedor de base de datos de PostgreSQL
 
 ```bash
-# Instalación
+# Instalar con NPM
 $ npm install -g docker
 $ npm install -g docker-compose
 ```

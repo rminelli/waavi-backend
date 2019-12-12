@@ -2,7 +2,7 @@
 
 # :movie_camera: Prueba Backend
 
-## Crear una API con Node la cual tendrá un sistema de autenticación y CRUD de películas y responder a una pregunta
+## Crear una API con Node la cual tendrá un sistema de autenticación y CRUD de películas
 
 ### La API de demostración está aquí: [backend](http://ec2-3-135-18-151.us-east-2.compute.amazonaws.com:3800)
 

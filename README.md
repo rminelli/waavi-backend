@@ -1,6 +1,6 @@
 [![prettier](https://img.shields.io/badge/styled%20with-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 
-# :movie_camera: Prueba Backend
+# :movie_camera: Backend API 
 
 ## Crear una API con Node la cual tendrá un sistema de autenticación y CRUD de películas
 
@@ -21,7 +21,7 @@
 - Swagger UI
 - Docker
 
-### :sparkles: :runner: Configurar el entorno local
+### :sparkles: :runner: Configuración del entorno
 
 ## Requisitos
 

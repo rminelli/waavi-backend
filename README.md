@@ -58,7 +58,7 @@ Es una buena opción usar un equilibrador de carga administrado como ELB (Elasti
 
 ### :eight_spoked_asterisk: PM2
 Es un administrador de procesos de daemon que lo ayudará a administrar y mantener su solicitud en línea 24/7
-El modo de clúster permite que las aplicaciones de Node.js en red (servidor http (s) / tcp / udp) se escalen en todas las CPU disponibles, sin ninguna modificación de código. Esto aumenta en gran medida el rendimiento y la confiabilidad de sus aplicaciones, dependiendo de la cantidad de CPU disponibles. Bajo el capó, esto utiliza el módulo de clúster Node.js de modo que los procesos secundarios de la aplicación escalada pueden compartir automáticamente los puertos del servidor. Para obtener más información, consulte Cómo funciona en la documentación oficial de Node.js en el módulo del clúster.
+El modo de clúster permite que las aplicaciones de Node.js en red (servidor http (s) / tcp / udp) se escalen en todas las CPU disponibles, sin ninguna modificación de código. Esto aumenta en gran medida el rendimiento y la confiabilidad de sus aplicaciones, dependiendo de la cantidad de CPU disponibles. Bajo el capó, esto utiliza el módulo de clúster Node.js de modo que los procesos secundarios de la aplicación escalada pueden compartir automáticamente los puertos del servidor. 
 
 ### :eight_spoked_asterisk: Microservices y Docker
 

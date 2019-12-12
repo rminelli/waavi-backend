@@ -10,7 +10,7 @@
 ### La documentación de la API está aquí: [Swagger](http://ec2-3-135-18-151.us-east-2.compute.amazonaws.com:3800/apidoc)
 ##
 :white_check_mark:
-#### Swagger UI permite a cualquier persona, ya sea su equipo de desarrollo o sus consumidores finales, visualizar e interactuar con los recursos de la API #### sin tener implementada ninguna lógica de implementación. Se genera automáticamente a partir de su especificación OpenAPI (anteriormente conocida como #### Swagger), con la documentación visual que facilita la implementación de back-end y el consumo del lado del cliente.
+#### Swagger UI permite a cualquier persona, ya sea su equipo de desarrollo o sus consumidores finales, visualizar e interactuar con los recursos de la API sin tener implementada ninguna lógica de implementación. Se genera automáticamente a partir de su especificación OpenAPI (anteriormente conocida como Swagger), con la documentación visual que facilita la implementación de back-end y el consumo del lado del cliente.
 
 Principales tecnologías con las que se desarrolló este proyecto:
 

@@ -5,7 +5,7 @@
  * No olvides crear tu base de datos localmente!
 */
 
-const { db } = require("./.env");
+const { db } = require("./.env_file");
 
 module.exports = {
   client: "postgresql",

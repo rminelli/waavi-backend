@@ -62,7 +62,7 @@ El modo de clúster permite que las aplicaciones de Node.js en red (servidor htt
 
 ### :eight_spoked_asterisk: Microservices y Docker
 
-:hearts: Los microservicios, también conocidos como arquitectura de microservicios, es un estilo arquitectónico que estructura una aplicación como una colección de servicios
+:heavy_check_mark: Los microservicios, también conocidos como arquitectura de microservicios, es un estilo arquitectónico que estructura una aplicación como una colección de servicios
 
 - Altamente mantenible y comprobable
 - Débilmente acoplado
@@ -70,7 +70,7 @@ El modo de clúster permite que las aplicaciones de Node.js en red (servidor htt
 - Organizado en torno a las capacidades empresariales.
 - Propiedad de un pequeño equipo
 
-:hearts: App Containerization con Docker permite empaquetar una aplicación con su entorno y todas sus dependencias en una "caja", llamada contenedor.
+:heavy_check_mark: App Containerization con Docker permite empaquetar una aplicación con su entorno y todas sus dependencias en una "caja", llamada contenedor.
 Los contenedores Docker aceleran las implementaciones, hacen que la aplicación sea portátil a cualquier plataforma, las imágenes son livianas, simplifican el mantenimiento y son altamente escalables.
 
 Mediante el uso de contenedores podemos empaquetar el código de la aplicación, la configuración y las dependencias en un solo objeto.

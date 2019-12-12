@@ -27,6 +27,12 @@
 
 :whale: Instalación de Docker y Docker-Compose
 
+```bash
+# Instalación
+$ npm install -g docker
+$ npm install -g docker-compose
+```
+
 - Acerca del motor [Docker](https://docs.docker.com/install/)
 
 
@@ -35,8 +41,7 @@
 #
 
 ```bash
-# Crea y inicia el contenedor
-$ docker-compose up -d
+
 ```
 
 ```bash

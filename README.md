@@ -65,8 +65,8 @@ $ npm start
 # Ejecutar en producción con pm2
 $ npm run production
 
-# La API se ejecuta en http://127.0.0.1:3800
-* Utilice Postman un cliente REST para probar la API.
+# La API se ejecuta en http://localhost:3800
+# Visualizar e interactuar con los recursos de la API http://localhost:3800/apidoc
 
 ```
 

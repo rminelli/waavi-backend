@@ -19,6 +19,7 @@
 - PostgreSQL
 - Knex
 - Swagger UI
+- Docker
 
 ### :sparkles: :runner: Configurar el entorno local
 
@@ -34,7 +35,7 @@
 #
 
 ```bash
-# Crea, inicia el contenedor
+# Crea y inicia el contenedor
 $ docker-compose up -d
 ```
 

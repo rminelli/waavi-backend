@@ -81,8 +81,7 @@ module.exports = app => {
   };
 
   const getByGeneros = (req, res) => {
-    const generos = req.headers.generos.split(",");
-    console.log(generos)
+    const generos = req.headers.generos.split(",");    
     app
       .db("peliculas")
       .whereIn("genero", generos)

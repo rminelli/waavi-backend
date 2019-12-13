@@ -38,7 +38,7 @@ $ npm install -g docker-compose
 - Acerca del motor [Docker](https://docs.docker.com/install/)
 
 
-- Instalar [Docker Compose](https://docs.docker.com/compose/install/)
+- Acerca del [Docker Compose](https://docs.docker.com/compose/install/)
 
 #
 

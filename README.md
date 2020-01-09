@@ -4,7 +4,6 @@
 
 ## API con Node para un sistema de autenticación y CRUD de películas
 
-##
 
 :white_check_mark: Principales tecnologías con las que se desarrolló este proyecto:
 
@@ -90,4 +89,4 @@ El modo de clúster permite que las aplicaciones de Node.js en red (servidor htt
 :heavy_check_mark: App Containerization con Docker permite empaquetar una aplicación con su entorno y todas sus dependencias en una "caja", llamada contenedor.
 Los contenedores Docker aceleran las implementaciones, hacen que la aplicación sea portátil a cualquier plataforma, las imágenes son livianas, simplifican el mantenimiento y son altamente escalables.
 
-Mediante el uso de contenedores podemos empaquetar el código de la aplicación, la configuración y las dependencias en un solo objeto.
+Usando contenedores, podemos empaquetar el código de la aplicación, la configuración y las dependencias en un solo objeto.

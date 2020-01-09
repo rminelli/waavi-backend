@@ -2,13 +2,7 @@
 
 # :movie_camera: Backend API 
 
-## Crear una API con Node la cual tendrá un sistema de autenticación y CRUD de películas
-
-### La API de demostración está aquí: [backend](http://ec2-3-135-18-151.us-east-2.compute.amazonaws.com:3800)
-
-### La documentación de la API está aquí: [Swagger](http://ec2-3-135-18-151.us-east-2.compute.amazonaws.com:3800/apidoc)
-
-#### Swagger UI permite a cualquier persona, ya sea su equipo de desarrollo o sus consumidores finales, visualizar e interactuar con los recursos de la API sin tener implementada ninguna lógica de implementación. Se genera automáticamente a partir de su especificación OpenAPI (anteriormente conocida como Swagger), con la documentación visual que facilita la implementación de back-end y el consumo del lado del cliente.
+## API con Node para un sistema de autenticación y CRUD de películas
 
 ##
 
